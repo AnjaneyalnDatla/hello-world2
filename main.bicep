@@ -4,7 +4,7 @@ param location string = resourceGroup().location
 @description('A static web app to host My Account Single Page Application')
 resource staticWebApp 'Microsoft.Web/staticSites@2021-03-01' = {
   name: 'stapp-test-lock'
-  location: 'eastus2'
+  location: location
   sku: {
     name: 'Standard'
     tier: 'Standard'
