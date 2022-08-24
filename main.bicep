@@ -1,3 +1,5 @@
+var location = 'eastus2'
+
 @description('A static web app to host My Account Single Page Application')
 resource staticWebApp 'Microsoft.Web/staticSites@2021-03-01' = {
   name: 'stapp-test-lock'
@@ -16,7 +18,7 @@ resource staticWebApp 'Microsoft.Web/staticSites@2021-03-01' = {
 
 resource applicationInsights 'Microsoft.Insights/components@2020-02-02' = {
   name: 'app-test-lock'
-  location: 'eastus2'
+  location: location
   kind: 'web'
   properties: {
     Application_Type: 'web'
