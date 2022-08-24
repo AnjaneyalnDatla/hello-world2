@@ -1,4 +1,5 @@
-var location = 'eastus2'
+@description('Specifies region of all resources')
+param location string = resourceGroup().location
 
 @description('A static web app to host My Account Single Page Application')
 resource staticWebApp 'Microsoft.Web/staticSites@2021-03-01' = {
