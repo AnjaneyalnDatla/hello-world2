@@ -1,6 +1,15 @@
 name: OIDC yaml
 on:
   workflow_dispatch:
+    inputs:
+      build_id:
+        required: true
+        description: Run ID to download artifact from workflow
+        type: string
+      environment:
+        description: 'Environment to run tests against'
+        type: environment
+        required: true
   pull_request:
     types:
       - opened
