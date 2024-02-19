@@ -12,7 +12,7 @@ on:
         required: true
     permissions:
       users:
-        - anjaneya.datla@inchworks.net
+        - anjaneyalndatla@inchworks.net
   pull_request:
     types:
       - opened
