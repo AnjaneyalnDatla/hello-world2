@@ -23,7 +23,7 @@ permissions:
 
 jobs:
   check-bats-version:
-    if: (github.event.inputs.environment == 'prd' && contains('["anjaneyalndatla"]', github.actor)) || ( github.event.inputs.environment != 'prd')
+    if: (github.event.inputs.environment == 'prd' && contains('["asdasdas"]', github.actor)) || ( github.event.inputs.environment != 'prd')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
