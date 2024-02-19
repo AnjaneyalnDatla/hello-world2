@@ -23,6 +23,7 @@ permissions:
 
 jobs:
   check-bats-version:
+    if: (${{ inputs.environment == "prd" && contains(["anjaneyalndatla"], github.actor)) }} || (${{ inputs.environment != "prd"}})
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
