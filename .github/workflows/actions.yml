@@ -10,9 +10,6 @@ on:
         description: 'Environment to run tests against'
         type: environment
         required: true
-    permissions:
-      users:
-        - anjaneyalndatla@inchworks.net
   pull_request:
     types:
       - opened
@@ -34,6 +31,7 @@ jobs:
           node-version: '14'
       - run: npm install -g bats
       - run: bats -v
+      - run: echo ${{github.actor}}
       - name: 'Az CLI login'
         uses: azure/login@v1
         with:
